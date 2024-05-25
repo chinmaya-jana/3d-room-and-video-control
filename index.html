@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>House using A-Frame</title>
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  <script>
+    AFRAME.registerComponent('play-pause', {
+      init: function() {
+        var abc = this.el.getAttribute('class');
+        var myVideo = document.querySelector('#sun');
+        var videoControls = document.querySelector('#videoControls');
+        videoControls.addEventListener('click', function() {
+          if(abc === 'vplay') {
+            if(myVideo.paused) {
+                myVideo.play();
+            }
+            else {
+                myVideo.pause();
+            }
+          }
+        });
+      }
+    });
+  </script>
+</head>
+<body>
+  <a-scene>
+    <a-box position="0 1 -4.95" rotation="0 0 0" width="2.9" height="2" depth="0.1" color="SpringGreen">middle wall</a-box>
+
+    <a-box position="1.5 1 -4" rotation="0 90 0" width="2" height="2" depth="0.1" color="yellow">right side wall</a-box>
+
+    <a-box position="-1.5 1 -4" rotation="0 -90 0" width="2" height="2" depth="0.1" color="yellow">left side wall</a-box>
+
+
+    <a-box position="-1.09 2.53 -4" rotation="-45 -90 0" width="2" height="3" depth="0.1" color="skyblue">left side ceiling</a-box>
+
+    <a-box position="1.03 2.59 -4" rotation="45 -90 0" width="2" height="3" depth="0.1" color="skyblue">right side ceiling</a-box>
+
+    
+    <a-plane position="0 0 -4" rotation="-90 0 0" width="5" height="2" depth="0.1" color="pink">Floor</a-plane>
+
+    <a-sky color="lightblue">SKY</a-sky>
+
+    <a-triangle position="0 2.5 -4.6" rotation="45 0 0" vertex-a="0 0.5 -1" vertex-b="-1.54 -0.6 0.1" vertex-c="1.54 -0.6 0.1" color="SpringGreen">back triangle</a-triangle>
+
+    <a-triangle position="0 2.5 -2.65" rotation="45 0 0" vertex-a="0 0.5 -1" vertex-b="-1.54 -0.6 0.11" vertex-c="1.54 -0.6 0.11" color="HotPink">front triangle</a-triangle>
+
+    <a-box position="-0.95 1 -3.05" rotation="0 0 0" width="1" height="2" depth="0.1" color="Aqua">left front wall</a-box>
+
+    <a-box position="0.95 1 -3.05" rotation="0 0 0" width="1" height="2" depth="0.1" color="Aqua">right front wall</a-box>
+
+    <a-box position="0 1.8 -3.05" rotation="0 0 0" width="0.9" height="0.4" depth="0.1" color="Aqua">gate upper wall</a-box>
+
+    <a-image position="0 2.2 -2.99" src="./IMAGE/welcome.jpg" width="0.9" height="0.4">welcome image</a-image>
+
+
+    <a-cylinder position="1.2 0.3 -3.5" color="#C99C73" height="0.5" radius="0.05">right front leg of bed</a-cylinder>
+
+    <a-cylinder position="1.2 0.3 -4.5" color="#C99C73" height="0.5" radius="0.05">right back leg of bed</a-cylinder>
+
+    <a-cylinder position="0.7 0.3 -3.5" color="#C99C73" height="0.5" radius="0.05">left front leg of bed</a-cylinder>
+
+    <a-cylinder position="0.7 0.3 -4.5" color="#C99C73" height="0.5" radius="0.05">left back leg of bed</a-cylinder>
+
+    <a-box position="0.95 0.6 -4" rotation="-90 0 0" width="0.7" height="1.2" depth="0.06" color="#A1662F">bed</a-box>
+
+
+    <a-cylinder position="-0.7 0.3 -4.5" color="#C99C73" height="0.3" radius="0.02">Chair1 front 1 leg</a-cylinder>
+
+    <a-cylinder position="-0.5 0.3 -4.5" color="#C99C73" height="0.3" radius="0.02">Chair1 back 1 leg</a-cylinder>
+
+    <a-cylinder position="-0.7 0.3 -4.3" color="#C99C73" height="0.3" radius="0.02">Chair1 front 2 leg</a-cylinder>
+
+    <a-cylinder position="-0.5 0.3 -4.3" color="#C99C73" height="0.3" radius="0.02">Chair1 back 2 leg</a-cylinder>
+
+    <a-box position="-0.6 0.45 -4.4" rotation="-90 0 0" width="0.25" height="0.25" depth="0.02" color="#A1662F">chair1 upper area</a-box>
+
+    <a-box position="-0.72 0.62 -4.4" rotation="0 -90 0" width="0.25" height="0.35" depth="0.01" color="#A1662F">chair1 upper back area</a-box>
+
+
+    <a-cylinder position="-0.7 0.3 -4" color="#C99C73" height="0.3" radius="0.02">Chair2 front 1 leg</a-cylinder>
+
+    <a-cylinder position="-0.5 0.3 -4" color="#C99C73" height="0.3" radius="0.02">Chair2 back 1 leg</a-cylinder>
+
+    <a-cylinder position="-0.7 0.3 -3.8" color="#C99C73" height="0.3" radius="0.02">Chair2 front 2 leg</a-cylinder>
+
+    <a-cylinder position="-0.5 0.3 -3.8" color="#C99C73" height="0.3" radius="0.02">Chair2 back 2 leg</a-cylinder>
+
+    <a-box position="-0.6 0.45 -3.9" rotation="-90 0 0" width="0.25" height="0.25" depth="0.02" color="#A1662F">chair2 upper area</a-box>
+
+    <a-box position="-0.72 0.62 -3.9" rotation="0 -90 0" width="0.25" height="0.35" depth="0.01" color="#A1662F">chair2 upper back area</a-box>
+
+
+    <a-cylinder position="-0.7 0.3 -3.5" color="#C99C73" height="0.3" radius="0.02">Chair3 front 1 leg</a-cylinder>
+
+    <a-cylinder position="-0.5 0.3 -3.5" color="#C99C73" height="0.3" radius="0.02">Chair3 back 1 leg</a-cylinder>
+
+    <a-cylinder position="-0.7 0.3 -3.3" color="#C99C73" height="0.3" radius="0.02">Chair3 front 2 leg</a-cylinder>
+
+    <a-cylinder position="-0.5 0.3 -3.3" color="#C99C73" height="0.3" radius="0.02">Chair3 back 2 leg</a-cylinder>
+
+    <a-box position="-0.6 0.45 -3.4" rotation="-90 0 0" width="0.25" height="0.25" depth="0.02" color="#A1662F">chair3 upper area</a-box>
+
+    <a-box position="-0.72 0.62 -3.4" rotation="0 -90 0" width="0.25" height="0.35" depth="0.01" color="#A1662F">chair3 upper back area</a-box>
+
+
+    <a-cylinder position="-1.3 0.3 -4.5" color="#C99C73" height="0.3" radius="0.02">Chair4 front 1 leg</a-cylinder>
+
+    <a-cylinder position="-1.1 0.3 -4.5" color="#C99C73" height="0.3" radius="0.02">Chair4 back 1 leg</a-cylinder>
+
+    <a-cylinder position="-1.3 0.3 -4.3" color="#C99C73" height="0.3" radius="0.02">Chair4 front 2 leg</a-cylinder>
+
+    <a-cylinder position="-1.1 0.3 -4.3" color="#C99C73" height="0.3" radius="0.02">Chair4 back 2 leg</a-cylinder>
+
+    <a-box position="-1.2 0.45 -4.4" rotation="-90 0 0" width="0.25" height="0.25" depth="0.02" color="#A1662F">chair4 upper area</a-box>
+
+    <a-box position="-1.32 0.62 -4.4" rotation="0 -90 0" width="0.25" height="0.35" depth="0.01" color="#A1662F">chair4 upper back area</a-box>
+
+
+    <a-cylinder position="-1.3 0.3 -4" color="#C99C73" height="0.3" radius="0.02">Chair5 front 1 leg</a-cylinder>
+
+    <a-cylinder position="-1.1 0.3 -4" color="#C99C73" height="0.3" radius="0.02">Chair5 back 1 leg</a-cylinder>
+
+    <a-cylinder position="-1.3 0.3 -3.8" color="#C99C73" height="0.3" radius="0.02">Chair5 front 2 leg</a-cylinder>
+
+    <a-cylinder position="-1.1 0.3 -3.8" color="#C99C73" height="0.3" radius="0.02">Chair5 back 2 leg</a-cylinder>
+
+    <a-box position="-1.2 0.45 -3.9" rotation="-90 0 0" width="0.25" height="0.25" depth="0.02" color="#A1662F">chair5 upper area</a-box>
+
+    <a-box position="-1.32 0.62 -3.9" rotation="0 -90 0" width="0.25" height="0.35" depth="0.01" color="#A1662F">chair5 upper back area</a-box>
+
+
+    <a-cylinder position="-1.3 0.3 -3.5" color="#C99C73" height="0.3" radius="0.02">Chair6 front 1 leg</a-cylinder>
+
+    <a-cylinder position="-1.1 0.3 -3.5" color="#C99C73" height="0.3" radius="0.02">Chair6 back 1 leg</a-cylinder>
+
+    <a-cylinder position="-1.3 0.3 -3.3" color="#C99C73" height="0.3" radius="0.02">Chair6 front 2 leg</a-cylinder>
+
+    <a-cylinder position="-1.1 0.3 -3.3" color="#C99C73" height="0.3" radius="0.02">Chair6 back 2 leg</a-cylinder>
+
+    <a-box position="-1.2 0.45 -3.4" rotation="-90 0 0" width="0.25" height="0.25" depth="0.02" color="#A1662F">chair6 upper area</a-box>
+
+    <a-box position="-1.32 0.62 -3.4" rotation="0 -90 0" width="0.25" height="0.35" depth="0.01" color="#A1662F">chair6 upper back area</a-box>
+
+
+    <a-cylinder position="0.95 0.65 -4" radius="0.2" height="0.05" color="black">television base</a-cylinder>
+
+    <a-cylinder position="0.95 0.9 -4" radius="0.02" height="0.7" color="white">television stand</a-cylinder>
+
+    <a-cylinder rotation="90 -90 0" position="0.95 1.4 -4" radius="0.15" height="0.03" color="black">television back base</a-cylinder>
+
+    <a-box position="0.93 1.4 -4" rotation="0 90 0" width="1" height="0.5" depth="0.01" color="white">television screen</a-box>
+    <a-entity cursor="rayOrigin: mouse"></a-entity>
+    <a-assets>
+      <video id="sun" src="./VIDEO/Alps_dolomits.mp4" loop="true"></video>
+    </a-assets>
+
+    <!-- Video -->
+    <a-video src="#sun" id="videoControls" class="vplay" width="1" height="0.5" rotation="0 90 0" position="0.92 1.4 -4" play-pause>
+    </a-video>
+  </a-scene>
+</body>
+</html>
